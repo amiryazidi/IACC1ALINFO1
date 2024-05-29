@@ -11,6 +11,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ApartementComponent } from './apartement/apartement.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     DetailProductComponent,
     ApartementComponent,
     ReactiveFormComponent,
+    AddproductComponent,
 
   ],
   imports: [

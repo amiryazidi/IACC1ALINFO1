@@ -7,6 +7,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailProductComponent } from './detail-product/detail-product.component';
 import { ApartementComponent } from './apartement/apartement.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'residence', component: ResidenceComponent },
   { path: 'Form', component: ReactiveFormComponent },
+  { path: 'addProduct', component: AddproductComponent },
   { path: 'produit/:id', component: DetailProductComponent },
   { path: 'appart/:id', component: ApartementComponent },
   { path: '**', component: NotFoundComponent },

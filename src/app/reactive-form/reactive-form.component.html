@@ -1,7 +1,49 @@
+<h1>FormControl</h1>
+
 <label>Login</label>
+
 <input type="text" [formControl]="login">
 
 <label>Password</label>
 <input type="text" [formControl]="pwd">
 
-<input type="submit" value="save">
+<input type="submit" value="save" (click)="save()" [disabled]="login.invalid || pwd.invalid">
+
+
+<h1>FormGroup</h1>
+
+<form [formGroup]="Form">
+    <label>Login</label>
+
+    <input class="form-control" type="text" formControlName="login">
+
+    <div class="alert alert-danger" *ngIf="this.Form.controls['login'].invalid &&  this.Form.controls['login'].touched">
+        <p *ngIf="this.Form.controls['login'].hasError('required')">login required</p>
+        <p *ngIf="this.Form.controls['login'].hasError('minlength')">login minlngth 4 </p>
+    </div>
+
+    <label>Password</label>
+    <input class="form-control" type="password" formControlName="pwd">
+    <div class="alert alert-danger" *ngIf="this.Form.controls['pwd'].invalid &&  this.Form.controls['pwd'].touched">
+        <p>password required</p>
+
+    </div>
+
+    <label>cin</label>
+    <input class="form-control" type="text" formControlName="cin">
+
+    <div class="alert alert-danger" *ngIf="this.Form.controls['cin'].invalid &&  this.Form.controls['cin'].touched">
+        <p>cin required</p>
+        <p>cin doit etre 8 chiffres</p>
+    </div>
+    <label>email</label>
+    <input class="form-control" type="text" formControlName="email">
+
+    <div class="alert alert-danger" *ngIf="this.Form.controls['email'].invalid &&  this.Form.controls['email'].touched">
+        <p>email required</p>
+
+
+    </div>
+    <input class="btn btn-info" type="submit" value="save" [disabled]="this.Form.invalid ">
+
+</form>
