@@ -1,0 +1,21 @@
+<table border="1" class="table">
+    <tr>
+        <th>id</th>
+        <th>AppartNum</th>
+        <th>FloorNum</th>
+        <th>Surface</th>
+        <th>Terrace</th>
+    </tr>
+    <tr *ngFor="let a of appart">
+        <td>{{a.id}}</td>
+        <td>{{a.appartNum}}</td>
+        <td>{{a.floorNum}}</td>
+        <td>{{a.surface}}</td>
+        <td>{{a.terrace}}</td>
+        <button (click)="liked(a.id)">Like</button>
+    </tr>
+</table>
+
+<ng-container *ngIf="this.appart.length==0">
+    No Appart Found
+</ng-container>

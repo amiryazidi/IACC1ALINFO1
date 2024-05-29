@@ -1,0 +1,24 @@
+<input type="text" [(ngModel)]="priceMax">
+
+
+<div class="row">
+    <div class="col" *ngFor="let p of listProduct; let i=index">
+        <div *ngIf="p.price ==priceMax  || priceMax==null">
+            <div class="card " style="width: 18rem; ">
+                <img class="card-img-top " src="{{p.image}} " alt="Card image cap ">
+                <div class="card-body ">
+                    <h5 class="card-title ">{{p.title}}</h5>
+                    <p class="card-text ">Price : {{p.price}}</p>
+                    <p class="card-text ">Quantity : {{p.quantity}}</p>
+                    <p class="card-text ">Like : {{p.nbrLike}}</p>
+                    <button class="btn btn-primary " (click)="increment(i) ">Like</button>
+                    <button class="btn btn-info " [routerLink]="['/produit',p.id]">Detais</button>
+
+                    <button class=" btn btn-primary " (click)="buy(i) " [disabled]="p.quantity==0 ">buy</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,9 @@
+<h2>
+    Liste des residences </h2>
+<ul class="list-group" *ngFor="let r of listResidences">
+
+    <li class="list-group-item">
+        {{r.id}} {{ r.name }} {{ r.address}}
+        <button class="btn btn-info" [routerLink]="['/appart',r.id]">SHow App</button>
+    </li>
+</ul>
