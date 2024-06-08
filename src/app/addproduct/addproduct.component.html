@@ -1,6 +1,6 @@
-<form [formGroup]="Form">
+<form class="form-group" [formGroup]="Form">
     <label>id</label>
-    <input type="text" formControlName="id">
+    <input class="form-control" type="text" formControlName="id">
 
 
 
@@ -10,16 +10,16 @@
     </div>
 
     <label>title</label>
-    <input type="text" formControlName="title">
+    <input class="form-control" type="text" formControlName="title">
     <label>price</label>
-    <input type="text" formControlName="price">
+    <input class="form-control" type="text" formControlName="price">
 
     <label>quantity</label>
-    <input type="text" formControlName="quantity">
+    <input class="form-control" class="form-control" type="text" formControlName="quantity">
 
     <label>nbrLike</label>
-    <input type="text" formControlName="nbrLike">
+    <input class="form-control" type="text" formControlName="nbrLike">
 
-    <input type="submit" value="save" (click)="save()">
+    <input class="btn btn-success" type="submit" value="save" (click)="save()">
 
 </form>

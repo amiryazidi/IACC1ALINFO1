@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'product', component: ProductComponent },
   { path: 'residence', component: ResidenceComponent },
   { path: 'Form', component: ReactiveFormComponent },
-  { path: 'addProduct', component: AddproductComponent },
+  { path: 'AddP', component: AddproductComponent },
   { path: 'produit/:id', component: DetailProductComponent },
   { path: 'appart/:id', component: ApartementComponent },
   { path: '**', component: NotFoundComponent },
