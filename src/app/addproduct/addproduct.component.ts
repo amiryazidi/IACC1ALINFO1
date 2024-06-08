@@ -8,16 +8,17 @@ import { ProductService } from '../services/product.service';
   styleUrls: ['./addproduct.component.css']
 })
 export class AddproductComponent {
-  constructor(private ps :ProductService) { }
-Form= new FormGroup({
-id:new FormControl('',[Validators.required,Validators.min(0)]),
-title:new FormControl('',[Validators.required,Validators.minLength(5)]),
-price:new FormControl('',Validators.required),
-quantity:new FormControl('',[Validators.required,Validators.min(0)]),
-nbrLike:new FormControl('',[Validators.required,Validators.min(0)]),
+  constructor(private ps: ProductService) { }
 
-})
-save(){
+  Form = new FormGroup({
+    id: new FormControl('', [Validators.required, Validators.min(0)]),
+    title: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    price: new FormControl('', Validators.required),
+    quantity: new FormControl('', [Validators.required, Validators.min(0)]),
+    nbrLike: new FormControl('', [Validators.required, Validators.min(0)]),
+
+  })
+  save() {
     this.ps.AddProduct(this.Form.value as any)
-}
+  }
 }
