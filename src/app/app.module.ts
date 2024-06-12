@@ -13,6 +13,7 @@ import { ApartementComponent } from './apartement/apartement.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     ApartementComponent,
     ReactiveFormComponent,
     AddproductComponent,
+    UpdateProductComponent,
 
   ],
   imports: [

@@ -1,0 +1,25 @@
+<form class="form-group" [formGroup]="Form">
+    <label>id</label>
+    <input class="form-control" type="text" formControlName="id">
+
+
+
+    <div class="alert alert-danger" *ngIf="this.Form.controls['id'].invalid &&  this.Form.controls['id'].touched">
+        <p *ngIf="this.Form.controls['id'].hasError('required')">id required</p>
+        <p *ngIf="this.Form.controls['id'].hasError('min')">id doit etre positif </p>
+    </div>
+
+    <label>title</label>
+    <input class="form-control" type="text" formControlName="title">
+    <label>price</label>
+    <input class="form-control" type="text" formControlName="price">
+
+    <label>quantity</label>
+    <input class="form-control" class="form-control" type="text" formControlName="quantity">
+
+    <label>nbrLike</label>
+    <input class="form-control" type="text" formControlName="nbrLike">
+
+    <input class="btn btn-success" type="submit" value="save" (click)="update()">
+
+</form>
